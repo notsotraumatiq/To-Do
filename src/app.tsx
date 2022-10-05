@@ -1,7 +1,8 @@
 import React from 'react'
+import Input from './components/input'
 
-export default function App() {
+export const App = ()  => {
   return (
-    <div>App</div>
-  )
+  <Input/>
+    )
 }

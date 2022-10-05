@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import path from "path";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 import webpackDevServer from "webpack-dev-server";
 
 dotenv();
@@ -43,7 +42,7 @@ const config: webpack.Configuration = {
           },
         ],
       },
-      { test: /\.css$/, use: ["style-loader", "css-loader"] },
+      { test: /\.css$/, use: ["style-loader", {loader: "css-loader", options: {importLoaders: 1, modules: true}}] },
       { test: /\.(woff|woff2|eot|ttf)$/, type: "asset/resource" },
       { test: /\.(png|jpeg|jpg|svg)$/, type: "asset/resource" },
     ],

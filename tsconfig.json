@@ -5,6 +5,16 @@
     "strict": true,
     "esModuleInterop": true,
     "declaration": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.module\\.css$",
+          "camelCase": true,
+          "generateScopedName": "[name]__[local]___[hash:base64:5]"
+        }
+      }
+    ],
     "experimentalDecorators": true,
     "sourceMap": true,
     "outDir": "./dist",
