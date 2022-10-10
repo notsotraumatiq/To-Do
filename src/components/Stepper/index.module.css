@@ -1,0 +1,18 @@
+.Stepper {
+    padding-left: 50%;
+}
+.StepperItem {
+    display: flex;
+    gap: 1rem;
+    }
+
+.StepperTitle {
+    background: #44EE74;
+    border-radius: 22px;
+    border: none;
+    padding: 15px 8px;
+}
+
+
+
+
