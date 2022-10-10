@@ -1,0 +1,58 @@
+h1{
+
+/* Text/Heading 1 */
+
+font-family: 'Be Vietnam Pro';
+font-style: normal;
+font-weight: 800;
+font-size: 60px;
+line-height: 68px;
+/* identical to box height, or 113% */
+
+letter-spacing: -0.05em;
+
+/* Color/Text */
+
+color: #C9D5CC;
+
+text-align: center;
+margin-top: 10%;
+}
+
+
+p {
+
+/* Text/Body 1 */
+
+font-family: 'Be Vietnam Pro';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+letter-spacing: -0.05em;
+
+/* Color/Text/Secondary */
+
+color: rgba(201, 213, 204, 0.6);
+text-align: center;
+margin-top: 20px;
+margin-bottom: 50px;
+}
+
+.Inputs {
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 18px;
+margin-right: 40px;
+
+/* Color/Input Background */
+
+background: rgba(213, 240, 220, 0.2);
+/* Color/Divider */
+
+border-bottom: 2px solid rgba(213, 240, 220, 0.35);
+border-radius: 8px 8px 0px 0px;
+}
