@@ -1,4 +1,4 @@
-interface ButtonProps {
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
 
 }
 

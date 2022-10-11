@@ -1,16 +1,30 @@
 .Stepper {
-    padding-left: 50%;
 }
 .StepperItem {
+    position: relative;
     display: flex;
     gap: 1rem;
+    padding-bottom: 4rem;
     }
 
+.StepperItem::before {
+    --size: 3rem;
+    content: "";
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    background-color: #44EE74;
+
+}
 .StepperTitle {
-    background: #44EE74;
-    border-radius: 22px;
+    /* background: ; */
+    /* border-radius: 22px;
     border: none;
-    padding: 15px 8px;
+    padding: 15px 8px; */
 }
 
 

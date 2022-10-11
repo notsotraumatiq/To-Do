@@ -1,58 +1,55 @@
-h1{
+.mainImage {
+  background-image: url(../../../assets//Beach_Monochromatic\ 1.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: gray;
+  position: bottom;
+}
+h1 {
+  /* Text/Heading 1 */
 
-/* Text/Heading 1 */
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 68px;
+  /* identical to box height, or 113% */
 
-font-family: 'Be Vietnam Pro';
-font-style: normal;
-font-weight: 800;
-font-size: 60px;
-line-height: 68px;
-/* identical to box height, or 113% */
+  letter-spacing: -0.05em;
 
-letter-spacing: -0.05em;
+  /* Color/Text */
 
-/* Color/Text */
+  color: #c9d5cc;
 
-color: #C9D5CC;
-
-text-align: center;
-margin-top: 10%;
+  text-align: center;
+  padding-top: 10%;
 }
 
+.pText {
+  /* Text/Body 1 */
 
-p {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
 
-/* Text/Body 1 */
+  letter-spacing: -0.05em;
 
-font-family: 'Be Vietnam Pro';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
+  /* Color/Text/Secondary */
 
-letter-spacing: -0.05em;
-
-/* Color/Text/Secondary */
-
-color: rgba(201, 213, 204, 0.6);
-text-align: center;
-margin-top: 20px;
-margin-bottom: 50px;
+  color: rgba(201, 213, 204, 0.6);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .Inputs {
-    display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px 18px;
-margin-right: 40px;
-
-/* Color/Input Background */
-
-background: rgba(213, 240, 220, 0.2);
-/* Color/Divider */
-
-border-bottom: 2px solid rgba(213, 240, 220, 0.35);
-border-radius: 8px 8px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 18px;
+  margin-right: 40px;
+  box-sizing: border-box;
 }
