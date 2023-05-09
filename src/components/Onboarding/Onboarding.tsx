@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button from "../Button";
-import Input from "../input";
+import Input from "../Input";
 import Stepper from "../Stepper";
 import styles from "./Onboarding.module.css";
 
