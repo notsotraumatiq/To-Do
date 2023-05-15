@@ -29,12 +29,13 @@ const List = () => {
       {items.length > 0 ? (
         <ul>
           {items.map((item, i) =>
-            editIndex === i ? (
+          (<li>
+            {editIndex === i ? (
               <li>
                 <input
                   autoFocus
                   value={item}
-                  onChange={(event) => {
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                     const updatedItems = [...items];
                     updatedItems[i] = event.target.value;
                     setItems(updatedItems);
@@ -43,13 +44,15 @@ const List = () => {
                     event.key === "Enter" &&
                     handleEditItem(i, event.target.value)
                   }
-                ></input>
+                ></input><button onClick={(event) => {
+                  setItems(items.filter((item, index) => index !== i))
+                }}/>
               </li>
             ) : (
               <li key={i} onClick={() => setEditIndex(i)}>
                 {item}
-              </li>
-            ),
+              </li>)}
+          </li>)
           )}
         </ul>
       ) : (
