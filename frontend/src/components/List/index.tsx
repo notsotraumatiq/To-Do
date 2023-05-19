@@ -28,32 +28,36 @@ const List = () => {
       />
       {items.length > 0 ? (
         <ul>
-          {items.map((item, i) =>
-          (<li>
-            {editIndex === i ? (
-              <li>
-                <input
-                  autoFocus
-                  value={item}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    const updatedItems = [...items];
-                    updatedItems[i] = event.target.value;
-                    setItems(updatedItems);
-                  }}
-                  onKeyDown={(event: any) =>
-                    event.key === "Enter" &&
-                    handleEditItem(i, event.target.value)
-                  }
-                ></input><button onClick={(event) => {
-                  setItems(items.filter((item, index) => index !== i))
-                }}/>
-              </li>
-            ) : (
-              <li key={i} onClick={() => setEditIndex(i)}>
-                {item}
-              </li>)}
-          </li>)
-          )}
+          {items.map((item, i) => (
+            <li>
+              {editIndex === i ? (
+                <li>
+                  <input
+                    autoFocus
+                    value={item}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                      const updatedItems = [...items];
+                      updatedItems[i] = event.target.value;
+                      setItems(updatedItems);
+                    }}
+                    onKeyDown={(event: any) =>
+                      event.key === "Enter" &&
+                      handleEditItem(i, event.target.value)
+                    }
+                  ></input>
+                  <button
+                    onClick={(event) => {
+                      setItems(items.filter((item, index) => index !== i));
+                    }}
+                  />
+                </li>
+              ) : (
+                <li key={i} onClick={() => setEditIndex(i)}>
+                  {item}
+                </li>
+              )}
+            </li>
+          ))}
         </ul>
       ) : (
         <p>there are no items in the list </p>
