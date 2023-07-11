@@ -28,3 +28,14 @@ def get_todo_task(request):
     if request.method == 'GET':
 
         return JsonResponse({})
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+
+def update_todo_task(request):
+    if request.method == 'PUT':
+        task_data = json.loads(request.body)
+
+        return JsonResponse({})
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)

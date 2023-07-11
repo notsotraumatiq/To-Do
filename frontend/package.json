@@ -1,7 +1,7 @@
 {
-  "name": "animu-dash",
+  "name": "ToDo",
   "version": "1.0.0",
-  "description": "local player for animu",
+  "description": "front end for ToDo app",
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server --progress",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/notsotraumatiq/animu-dash.git"
   },
   "keywords": [],
-  "author": "Atiq Patel & Gourab Nag",
+  "author": "Atiq Patel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/notsotraumatiq/animu-dash/issues"
@@ -56,6 +56,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "react-router-dom": "6"
   }
 }

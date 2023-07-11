@@ -1,5 +1,12 @@
 import React, { useState } from "react";
+import axios from "axios";
 
+interface Task {
+  id: string;
+  task: string;
+  completed?: boolean;
+}
+const backendURL = "localhost:8000/";
 const List = () => {
   const [items, setItems] = useState<string[]>([]);
   const [newItem, setNewItem] = useState<string>("");
@@ -12,7 +19,7 @@ const List = () => {
     setEditIndex(null);
   }
   return (
-    <div>
+    <div style={{}}>
       <h1>List</h1>
       <input
         type="text"
@@ -20,6 +27,7 @@ const List = () => {
         onChange={(event) => setNewItem(event.target.value)}
         onKeyDown={(event) => {
           if (event.key === "Enter") {
+            axios.post(backendURL + "/add");
             setItems([...items, newItem]);
             setNewItem("");
           }
@@ -49,7 +57,9 @@ const List = () => {
                     onClick={(event) => {
                       setItems(items.filter((item, index) => index !== i));
                     }}
-                  />
+                  >
+                    Delete
+                  </button>
                 </li>
               ) : (
                 <li key={i} onClick={() => setEditIndex(i)}>
