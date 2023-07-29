@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 interface Task {
@@ -6,9 +6,11 @@ interface Task {
   task: string;
   completed?: boolean;
 }
-const backendURL = "localhost:8000/";
+
+const backendURL = "http://localhost:8000/";
 const List = () => {
   const [items, setItems] = useState<string[]>([]);
+  const [task, setTask] = useState<Task[] | null>(null);
   const [newItem, setNewItem] = useState<string>("");
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
@@ -18,8 +20,20 @@ const List = () => {
     setItems(updatedItems);
     setEditIndex(null);
   }
+
+  useEffect(() => {
+    axios
+      .get(backendURL + "api/get/")
+      .then((response) => {
+        setTask(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
-    <div style={{}}>
+    <div>
       <h1>List</h1>
       <input
         type="text"
