@@ -1,5 +1,5 @@
 """
-URL configuration for animudash project.
+URL configuration for TaskMG project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ToDo.views import add_todo_task
+from ToDo.views import add_todo_task, get_todo_task, update_todo_task, delete_todo_task
 
 urlpatterns = [
-    # path('/api/get', get_todo_task, name='get_todo_task'),
+    path('api/get/', get_todo_task, name='get_todo_task'),
     path('api/add/', add_todo_task, name='add_todo_task'),
-    # path('/api/update', update_todo_task, name='update_todo_task'),
-    # path('/api/delete', delete_todo_task, name='delete_todo_task')
+    path('api/update/', update_todo_task, name='update_todo_task'),
+    path('api/delete/', delete_todo_task, name='delete_todo_task')
 ]
