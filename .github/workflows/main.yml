@@ -19,4 +19,4 @@ jobs:
           echo "Event: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
           echo "Workflow: ${{ github.workflow }}"
-          echo "Action: ${{ github.env.VERSION_NUMBER }}"
+          echo "Action: ${{ github.env }}"
