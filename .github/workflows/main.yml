@@ -15,8 +15,8 @@ jobs:
 
       - name: Print GitHub variables
         run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Event: ${{ github.event_name }}"
-          echo "Branch: ${{ github.ref }}"
-          echo "Workflow: ${{ github.workflow }}"
-          echo "Action: ${{ vars.VERSION_NUMBER }}"
+          echo "Version Number: ${{ vars.VERSION_NUMBER }}"
+
+      - name: Update version number
+        run: |
+          echo "VERSION_NUMBER={1.0.1}" >> $GITHUB_ENV
