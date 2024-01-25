@@ -17,8 +17,12 @@ jobs:
         run: |
           echo "Version Number: ${{ vars.VERSION_NUMBER }}"
 
-      - name: Set env
-        run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
-
-      - name: Test
-        run: echo $GITHUB_SHA_SHORT
+      - name: curl update
+        run: |
+          curl -L \
+          -X PATCH \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{github.token}}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://github.com/notsotraumatiq/To-Do \
+          -d '{"name":"VERSION_NUMEBER","value":"octocat"}'
