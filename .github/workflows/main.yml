@@ -1,5 +1,8 @@
 name: My Workflow
 
+permissions:
+  contents: read
+  issues: write
 on:
   push:
     branches:
