@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "Version Number: ${{ vars.VERSION_NUMBER }}"
 
-      - name: curl update
+      - name: curl updates
         run: |
           curl -L \
           -X PATCH \
