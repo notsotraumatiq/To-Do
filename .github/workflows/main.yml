@@ -1,8 +1,5 @@
 name: My Workflow
 
-permissions:
-  contents: write
-  issues: write
 on:
   push:
     branches:
@@ -12,7 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+      issues: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
